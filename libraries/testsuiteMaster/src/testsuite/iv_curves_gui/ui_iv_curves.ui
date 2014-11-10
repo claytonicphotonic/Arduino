@@ -1,0 +1,1704 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1060</width>
+    <height>846</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QComboBox" name="laser_sections_combo">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>10</y>
+      <width>111</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>DC Test Station</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>RF Test Station (TOSA)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>RF Test Station (COC)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>SFP DACs</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Dummy</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Laser Connection</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>10</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>UID</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="uid_text">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>10</y>
+      <width>113</width>
+      <height>23</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>10</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Stage</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="laser_stage_combo">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>10</y>
+      <width>78</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>BAR</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>DIE</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>COC</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>FOC</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>TOSA</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>SFP</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>DUMMY</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Filepath Base</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="filepath_base">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>40</y>
+      <width>431</width>
+      <height>23</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>70</y>
+      <width>341</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Mirror 1</string>
+    </property>
+    <widget class="QCheckBox" name="mirror1_check">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>79</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Enabled</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>70</y>
+       <width>53</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Start</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>91</y>
+       <width>53</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Stop</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>110</y>
+       <width>53</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Step</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="mirror1_start_text">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>66</y>
+       <width>61</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="mirror1_stop_text">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>86</y>
+       <width>61</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="mirror1_step_text">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>106</y>
+       <width>61</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>45</y>
+       <width>53</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>IV Type</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="mirror1_type_combo">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>40</y>
+       <width>71</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Current</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Voltage</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QWidget" name="verticalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>30</y>
+       <width>171</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="mirror1_plot_layout"/>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>70</y>
+      <width>341</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Mirror 2</string>
+    </property>
+    <widget class="QCheckBox" name="mirror2_check">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>79</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Enabled</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>70</y>
+       <width>53</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Start</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>91</y>
+       <width>53</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Stop</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>110</y>
+       <width>53</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Step</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="mirror2_start_text">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>66</y>
+       <width>61</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="mirror2_stop_text">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>86</y>
+       <width>61</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="mirror2_step_text">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>106</y>
+       <width>61</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>45</y>
+       <width>53</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>IV Type</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="mirror2_type_combo">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>40</y>
+       <width>71</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Current</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Voltage</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QWidget" name="verticalLayoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>30</y>
+       <width>171</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="mirror2_plot_layout"/>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>70</y>
+      <width>341</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Gain</string>
+    </property>
+    <widget class="QCheckBox" name="gain_check">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>79</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Enabled</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_13">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>70</y>
+       <width>53</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Start</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_14">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>91</y>
+       <width>53</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Stop</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_15">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>110</y>
+       <width>53</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Step</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="gain_start_text">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>66</y>
+       <width>61</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="gain_stop_text">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>86</y>
+       <width>61</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="gain_step_text">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>106</y>
+       <width>61</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_16">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>45</y>
+       <width>53</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>IV Type</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="gain_type_combo">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>40</y>
+       <width>71</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Current</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Voltage</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QWidget" name="verticalLayoutWidget_3">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>30</y>
+       <width>171</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="gain_plot_layout"/>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_4">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>250</y>
+      <width>341</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>SOA 1</string>
+    </property>
+    <widget class="QCheckBox" name="soa1_check">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>79</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Enabled</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_17">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>70</y>
+       <width>53</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Start</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_18">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>91</y>
+       <width>53</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Stop</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_19">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>110</y>
+       <width>53</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Step</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="soa1_start_text">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>66</y>
+       <width>61</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="soa1_stop_text">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>86</y>
+       <width>61</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="soa1_step_text">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>106</y>
+       <width>61</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_20">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>45</y>
+       <width>53</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>IV Type</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="soa1_type_combo">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>40</y>
+       <width>71</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Current</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Voltage</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QWidget" name="verticalLayoutWidget_4">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>30</y>
+       <width>171</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="soa1_plot_layout"/>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_5">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>250</y>
+      <width>341</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>SOA 2</string>
+    </property>
+    <widget class="QCheckBox" name="soa2_check">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>79</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Enabled</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_21">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>70</y>
+       <width>53</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Start</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_22">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>91</y>
+       <width>53</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Stop</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_23">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>110</y>
+       <width>53</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Step</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="soa2_start_text">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>66</y>
+       <width>61</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="soa2_stop_text">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>86</y>
+       <width>61</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="soa2_step_text">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>106</y>
+       <width>61</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_24">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>45</y>
+       <width>53</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>IV Type</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="soa2_type_combo">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>40</y>
+       <width>71</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Current</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Voltage</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QWidget" name="verticalLayoutWidget_5">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>30</y>
+       <width>171</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="soa2_plot_layout"/>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_6">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>250</y>
+      <width>341</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Laser Phase</string>
+    </property>
+    <widget class="QCheckBox" name="laspha_check">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>79</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Enabled</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_25">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>70</y>
+       <width>53</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Start</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_26">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>91</y>
+       <width>53</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Stop</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_27">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>110</y>
+       <width>53</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Step</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="laspha_start_text">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>66</y>
+       <width>61</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="laspha_stop_text">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>86</y>
+       <width>61</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="laspha_step_text">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>106</y>
+       <width>61</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_28">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>45</y>
+       <width>53</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>IV Type</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="laspha_type_combo">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>40</y>
+       <width>71</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Current</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Voltage</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QWidget" name="verticalLayoutWidget_6">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>30</y>
+       <width>171</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="laspha_plot_layout"/>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_7">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>420</y>
+      <width>341</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Phase 1</string>
+    </property>
+    <widget class="QCheckBox" name="phase1_check">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>79</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Enabled</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_29">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>70</y>
+       <width>53</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Start</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_30">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>91</y>
+       <width>53</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Stop</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_31">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>110</y>
+       <width>53</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Step</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="phase1_start_text">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>66</y>
+       <width>61</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="phase1_stop_text">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>86</y>
+       <width>61</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="phase1_step_text">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>106</y>
+       <width>61</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_32">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>45</y>
+       <width>53</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>IV Type</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="phase1_type_combo">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>40</y>
+       <width>71</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Current</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Voltage</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QWidget" name="verticalLayoutWidget_7">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>30</y>
+       <width>171</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="phase1_plot_layout"/>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_8">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>420</y>
+      <width>341</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Modulator 1</string>
+    </property>
+    <widget class="QCheckBox" name="mod1_check">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>79</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Enabled</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_33">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>70</y>
+       <width>53</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Start</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_34">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>91</y>
+       <width>53</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Stop</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_35">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>110</y>
+       <width>53</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Step</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="mod1_start_text">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>66</y>
+       <width>61</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="mod1_stop_text">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>86</y>
+       <width>61</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="mod1_step_text">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>106</y>
+       <width>61</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_36">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>45</y>
+       <width>53</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>IV Type</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="mod1_type_combo">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>40</y>
+       <width>71</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>Current</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Voltage</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QWidget" name="verticalLayoutWidget_8">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>30</y>
+       <width>171</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="mod1_plot_layout"/>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_9">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>420</y>
+      <width>341</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Modulator 2</string>
+    </property>
+    <widget class="QCheckBox" name="mod2_check">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>79</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Enabled</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_37">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>70</y>
+       <width>53</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Start</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_38">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>91</y>
+       <width>53</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Stop</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_39">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>110</y>
+       <width>53</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Step</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="mod2_start_text">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>66</y>
+       <width>61</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="mod2_stop_text">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>86</y>
+       <width>61</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="mod2_step_text">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>106</y>
+       <width>61</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_40">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>45</y>
+       <width>53</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>IV Type</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="mod2_type_combo">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>40</y>
+       <width>71</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>Current</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Voltage</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QWidget" name="verticalLayoutWidget_9">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>30</y>
+       <width>171</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="mod2_plot_layout"/>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_10">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>590</y>
+      <width>341</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>On-Chip Detector</string>
+    </property>
+    <widget class="QCheckBox" name="detector_check">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>79</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Enabled</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_41">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>70</y>
+       <width>53</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Start</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_42">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>91</y>
+       <width>53</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Stop</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_43">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>110</y>
+       <width>53</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Step</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="detector_start_text">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>66</y>
+       <width>61</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="detector_stop_text">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>86</y>
+       <width>61</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="detector_step_text">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>106</y>
+       <width>61</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_44">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>45</y>
+       <width>53</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>IV Type</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="detector_type_combo">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>40</y>
+       <width>71</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>Current</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Voltage</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QWidget" name="verticalLayoutWidget_10">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>30</y>
+       <width>171</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="detector_plot_layout"/>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="run_button">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>763</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>RUN</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="save_settings_button">
+    <property name="geometry">
+     <rect>
+      <x>960</x>
+      <y>780</y>
+      <width>91</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Save Settings</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="load_settings_button">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>780</y>
+      <width>91</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Load Settings</string>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="minor_progress">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>750</y>
+      <width>291</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="major_progress">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>780</y>
+      <width>291</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_45">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>10</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Last timestamp:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="timestamp_label">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>10</y>
+      <width>131</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1060</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

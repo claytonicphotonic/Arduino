@@ -1,0 +1,14 @@
+# PRO8000 8-Slot Modular Rack Chassis for Laser Diode Instrumentation
+class PROTELD(): #*************************************************************
+    def __init__(self, portname):
+        self.serialport = serial.serial_for_url(portname, do_not_open=True)
+        self.serialport.close()  # In case port is already open
+        self.serialport.open()
+        self.serialport.write("++addr 5\n".encode())
+        self.successread = 0
+        self.failread = 0
+        
+    # Write commands*******************************************************    
+
+        
+    # Read commands **************************************************************    

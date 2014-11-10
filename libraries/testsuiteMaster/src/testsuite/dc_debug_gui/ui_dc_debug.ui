@@ -1,0 +1,973 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1232</width>
+    <height>864</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>DC Debug</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label_69">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>220</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>OSA Parameters:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_76">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>730</y>
+      <width>53</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SMSR</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="osa_smsr">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>730</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>---</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>350</y>
+      <width>521</width>
+      <height>371</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="osa_trace_layout"/>
+   </widget>
+   <widget class="QPushButton" name="osa_sweep">
+    <property name="geometry">
+     <rect>
+      <x>1130</x>
+      <y>760</y>
+      <width>91</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Sweep OSA</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="save_settings_button">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>1130</x>
+      <y>790</y>
+      <width>91</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Save Settings</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="load_settings_button">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>1040</x>
+      <y>790</y>
+      <width>91</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Load Settings</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>661</x>
+      <y>10</y>
+      <width>531</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>GPIB Connection</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="gpib_connection">
+       <item>
+        <property name="text">
+         <string>NI VISA</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Prologix Ethernet</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Prologix USB</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Dummy</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>GPIB IP/Serial Port</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="gpib_connection_text"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_8">
+       <property name="text">
+        <string>GPIB Bus</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="gpib_connection_bus">
+       <property name="maximumSize">
+        <size>
+         <width>40</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>259</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Laser Connection</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="laser_sections">
+       <item>
+        <property name="text">
+         <string>DC Test Station</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>RF Test Station (TOSA)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>RF Test Station (COC)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>SFP DACs</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Dummy</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>110</y>
+      <width>221</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_17">
+     <item>
+      <widget class="QLabel" name="label_58">
+       <property name="text">
+        <string>IS Value:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="is_value">
+       <property name="text">
+        <string>---</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_10">
+       <property name="maximumSize">
+        <size>
+         <width>22</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>mW</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="is_get_value">
+       <property name="text">
+        <string>Get Value</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>150</y>
+      <width>508</width>
+      <height>38</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_18">
+     <item>
+      <widget class="QLabel" name="label_60">
+       <property name="text">
+        <string>Wavemeter Values:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="label_61">
+         <property name="text">
+          <string>Peak 1 Wavelength</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_62">
+         <property name="text">
+          <string>Peak 2 Wavelength</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QLabel" name="wm_peak1_wavelength">
+         <property name="minimumSize">
+          <size>
+           <width>59</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>---</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="wm_peak2_wavelength">
+         <property name="minimumSize">
+          <size>
+           <width>59</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>---</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QLabel" name="label_65">
+         <property name="text">
+          <string>Peak 1 Power</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_66">
+         <property name="text">
+          <string>Peak 2 Power</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QLabel" name="wm_peak1_power">
+         <property name="minimumSize">
+          <size>
+           <width>49</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>---</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="wm_peak2_power">
+         <property name="minimumSize">
+          <size>
+           <width>49</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>---</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="wm_get_values">
+       <property name="text">
+        <string>Get Values</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>50</y>
+      <width>181</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Integrating Sphere</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="is_connect">
+       <property name="text">
+        <string>Connect</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>50</y>
+      <width>291</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_5">
+     <item>
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>Wavemeter (HP86120B) GPIB</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="wavemeter_gpib"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="wavemeter_connect">
+       <property name="text">
+        <string>Connect</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>930</x>
+      <y>50</y>
+      <width>289</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_6">
+     <item>
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string>OSA (MS9740) IP:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="osa_ip"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="osa_connect">
+       <property name="text">
+        <string>Connect</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>220</y>
+      <width>179</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_19">
+     <item>
+      <widget class="QLabel" name="label_70">
+       <property name="text">
+        <string>Video Bandwidth</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="osa_vbw">
+       <item>
+        <property name="text">
+         <string>10 Hz</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>100 Hz</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>200 Hz</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1 kHz</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2 kHz</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>10 kHz</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>100 kHz</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1 MHz</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>250</y>
+      <width>290</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_20">
+     <item>
+      <widget class="QLabel" name="label_72">
+       <property name="text">
+        <string>Resolution</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="osa_resolution">
+       <item>
+        <property name="text">
+         <string>0.03</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>0.05</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>0.07</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>0.1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>0.2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>0.5</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1.0</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_71">
+       <property name="text">
+        <string>Sampling Points</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="osa_sampling">
+       <item>
+        <property name="text">
+         <string>51</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>101</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>251</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>501</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1001</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2001</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>5001</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>10001</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>20001</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>50001</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>280</y>
+      <width>521</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_21">
+     <item>
+      <widget class="QLabel" name="label_73">
+       <property name="text">
+        <string>Start Wavelength (nm)</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="osa_start"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_74">
+       <property name="text">
+        <string>Stop Wavelength (nm)</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="osa_stop"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="osa_start_stop_save">
+       <property name="text">
+        <string>Save Values</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>310</y>
+      <width>451</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_22">
+     <item>
+      <widget class="QLabel" name="label_75">
+       <property name="text">
+        <string>Center Wavelength (nm)</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="osa_center"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Span (nm)</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="osa_span"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="osa_center_span_save">
+       <property name="text">
+        <string>Save Values</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="laser_sections_connect">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>10</y>
+      <width>91</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Connect</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="refresh_check">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>151</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Output Refresh (sec)</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="refresh_seconds">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>50</y>
+      <width>51</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0.5</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="zero_laser">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>800</y>
+      <width>91</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Zero Laser</string>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="osa_progress">
+    <property name="geometry">
+     <rect>
+      <x>1100</x>
+      <y>730</y>
+      <width>118</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget_10">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>750</y>
+      <width>381</width>
+      <height>38</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_24">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <widget class="QLabel" name="label_64">
+         <property name="text">
+          <string>Peak 1 Wavelength</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_67">
+         <property name="text">
+          <string>Peak 2 Wavelength</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <widget class="QLabel" name="osa_peak1_wavelength">
+         <property name="minimumSize">
+          <size>
+           <width>59</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>---</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="osa_peak2_wavelength">
+         <property name="minimumSize">
+          <size>
+           <width>59</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>---</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <item>
+        <widget class="QLabel" name="label_68">
+         <property name="text">
+          <string>Peak 1 Power</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_77">
+         <property name="text">
+          <string>Peak 2 Power</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_8">
+       <item>
+        <widget class="QLabel" name="osa_peak1_power">
+         <property name="minimumSize">
+          <size>
+           <width>49</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>---</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="osa_peak2_power">
+         <property name="minimumSize">
+          <size>
+           <width>49</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>---</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QScrollArea" name="scrollArea">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>80</y>
+      <width>671</width>
+      <height>721</height>
+     </rect>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOn</enum>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>648</width>
+       <height>715</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_10">
+      <item>
+       <layout class="QVBoxLayout" name="electrode_layout"/>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1232</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
