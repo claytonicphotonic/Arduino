@@ -21,7 +21,7 @@
 
 //// Calibration variables
 // X, Y, Z, E steps per unit - Metric Prusa Mendel with Wade extruder:
-float axis_steps_per_unit[] = {53.33, 53.33, 3200/1.25,700}; 
+float axis_steps_per_unit[] ={20, 20, 3200/1.25,500};
 // Metric Prusa Mendel with Makergear geared stepper extruder:
 //float axis_steps_per_unit[] = {80,80,3200/1.25,1380}; 
 // MakerGear Hybrid Prusa Mendel:
@@ -61,8 +61,8 @@ const bool DISABLE_Z = true;
 const bool DISABLE_E = false;
 
 // Inverting axis direction
-const bool INVERT_X_DIR = false;
-const bool INVERT_Y_DIR = false;
+const bool INVERT_X_DIR = true;
+const bool INVERT_Y_DIR = true;
 const bool INVERT_Z_DIR = true;
 const bool INVERT_E_DIR = false;
 
@@ -74,8 +74,8 @@ const bool INVERT_E_DIR = false;
 
 const bool min_software_endstops = false; //If true, axis won't move to coordinates less than zero.
 const bool max_software_endstops = true;  //If true, axis won't move to coordinates greater than the defined lengths below.
-const int X_MAX_LENGTH = 200;
-const int Y_MAX_LENGTH = 200;
+const int X_MAX_LENGTH = 230;    /// I.S./ Fiber stage
+const int Y_MAX_LENGTH = 850;    /// Bar stage
 const int Z_MAX_LENGTH = 100;
 
 //// MOVEMENT SETTINGS
@@ -96,7 +96,7 @@ bool axis_relative_modes[] = {false, false, false, false};
 #define RAMP_ACCELERATION 1
 
 //// Acceleration settings
-#ifdef RAMP_ACCELERATION
+#ifdef RAMP_ACCELERATION 
 // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
 float max_start_speed_units_per_second[] = {20.0,20.0,0.2,10.0};
 long max_acceleration_units_per_sq_second[] = {100,100,50,10000}; // X, Y, Z and E max acceleration in mm/s^2 for printing moves or retracts

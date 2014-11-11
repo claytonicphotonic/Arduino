@@ -18,7 +18,7 @@
 // G0  -> G1
 // G1  - Coordinated Movement X Y Z E
 // G4  - Dwell S<seconds> or P<milliseconds>
-// G28 - Home all Axis
+// G28 - Home all Axis                             <<<<------ be carefull if you have the directions inverted in the config !!!! Youll crash!
 // G90 - Use Absolute Coordinates
 // G91 - Use Relative Coordinates
 // G92 - Set current position to cordinates given
