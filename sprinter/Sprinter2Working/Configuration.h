@@ -5,7 +5,7 @@
 
 //// The following define selects which electronics board you have. Please choose the one that matches your setup
 // MEGA/RAMPS up to 1.2  = 3,
-// RAMPS 1.3 = 33
+// RAMPS 1.3 = 33                       <====== works well for RAMPS 1.4
 // Gen6 = 5, 
 // Sanguinololu up to 1.1 = 6
 // Sanguinololu 1.2 and above = 62
@@ -74,8 +74,8 @@ const bool INVERT_E_DIR = false;
 
 const bool min_software_endstops = false; //If true, axis won't move to coordinates less than zero.
 const bool max_software_endstops = true;  //If true, axis won't move to coordinates greater than the defined lengths below.
-const int X_MAX_LENGTH = 230;    /// I.S./ Fiber stage
-const int Y_MAX_LENGTH = 850;    /// Bar stage
+const int X_MAX_LENGTH = 850;    /// I.S./ Fiber stage
+const int Y_MAX_LENGTH = 230;    /// Bar stage
 const int Z_MAX_LENGTH = 100;
 
 //// MOVEMENT SETTINGS
